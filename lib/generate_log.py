@@ -1,6 +1,5 @@
 from datetime import datetime
 import os
-import requests
 
 
 def generate_log(data):
@@ -18,6 +17,7 @@ def generate_log(data):
 
 
 def fetch_data():
+    import requests
     response = requests.get("https://jsonplaceholder.typicode.com/posts/1")
     if response.status_code == 200:
         return response.json()
